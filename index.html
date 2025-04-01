@@ -3,40 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Para ti ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Hola, <span id="name">Tefy</span> ❤️</h1>
         <p>Algo especial para ti...</p>
-        <button onclick="showMessage()">Haz clic aquí</button>
+        <button onclick="showCoupon()">Haz clic aquí</button>
     </div>
-    
-    <!-- Corazones flotantes (JS los generará) -->
-    
-    <script>
-        // Generar corazones
-        function createHearts() {
-            for (let i = 0; i < 20; i++) {
-                const heart = document.createElement("div");
-                heart.classList.add("heart");
-                heart.innerHTML = "❤️";
-                heart.style.left = Math.random() * 100 + "vw";
-                heart.style.top = Math.random() * 100 + "vh";
-                heart.style.animationDuration = 3 + Math.random() * 7 + "s";
-                document.body.appendChild(heart);
-            }
-        }
-        
-        // Mostrar mensaje al dar clic
-        function showMessage() {
-            alert("¡Te ganaste un cupón para...! 😊💖"); // Puedes cambiar el mensaje
-            // También podrías añadir una imagen aquí
-        }
-        
-        // Inicializar corazones
-        window.onload = createHearts;
-    </script>
+
+    <!-- Cupón (oculto inicialmente) -->
+    <div id="coupon" class="coupon hidden">
+        <h2>¡GANASTE UN CUPÓN! 🎉</h2>
+        <div class="coupon-code">CÓDIGO: <span id="code">EDU-AMOR-2024</span></div>
+        <button onclick="copyCode()">Copiar código</button>
+    </div>
+
+    <!-- Confeti (generado por JS) -->
+    <canvas id="confetti"></canvas>
+
+    <script src="script.js"></script>
 </body>
 </html>
