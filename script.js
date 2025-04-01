@@ -15,7 +15,14 @@ function showCoupon() {
         startConfetti(); // Inicia el confeti
     }, 500); // Espera 0.5 segundos (igual que la transición)
 }
-
+function sendWhatsApp() {
+    const prize = document.getElementById("prizeInput").value || "algo especial";
+    const phoneNumber = "+584247334173"; // Reemplaza con tu número (ej: 51987654321)
+    const message = `¡Mi cupón! 🎁\nQuiero: ${prize}\n\nDe: ${document.getElementById("name").innerText}`;
+    
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+}
 // Copiar código del cupón
 function copyCode() {
     const code = document.getElementById("code").innerText;
