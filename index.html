@@ -14,11 +14,13 @@
     </div>
 
     <!-- Cupón (oculto inicialmente) -->
-    <div id="coupon" class="coupon hidden">
-        <h2>¡GANASTE UN CUPÓN! 🎉</h2>
-        <div class="coupon-code">CÓDIGO: <span id="code">EDU-AMOR-2024</span></div>
-        <button onclick="copyCode()">Copiar código</button>
+   <div id="coupon" class="coupon hidden">
+    <h2>¡GANASTE UN CUPÓN! 🎉</h2>
+    <div class="coupon-input">
+        <input type="text" id="prizeInput" placeholder="Ganaste un cupón para... [escribe aquí]">
     </div>
+    <button onclick="sendWhatsApp()">💌 Enviar por WhatsApp</button>
+</div>
 
     <!-- Confeti (generado por JS) -->
     <canvas id="confetti"></canvas>
