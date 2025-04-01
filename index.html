@@ -1,12 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti ❤️</title>
 </head>
 <body>
-  <h1>Valentina</h1>
-  <p>TU Regalo de Navidad <3!!🩵</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <div class="container">
+        <h1>Hola, <span id="name">[Nombre]</span> ❤️</h1>
+        <p>Quería hacer algo especial para ti...</p>
+        <button onclick="showMessage()">Haz clic aquí</button>
+    </div>
+    
+    <!-- Corazones flotantes (JS los generará) -->
+    
+    <script>
+        // Generar corazones
+        function createHearts() {
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.top = Math.random() * 100 + "vh";
+                heart.style.animationDuration = 3 + Math.random() * 7 + "s";
+                document.body.appendChild(heart);
+            }
+        }
+        
+        // Mostrar mensaje al dar clic
+        function showMessage() {
+            alert("¡Eres increíble! 😊💖"); // Puedes cambiar el mensaje
+            // También podrías añadir una imagen aquí
+        }
+        
+        // Inicializar corazones
+        window.onload = createHearts;
+    </script>
 </body>
-
 </html>
