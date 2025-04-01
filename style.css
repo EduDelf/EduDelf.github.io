@@ -1,6 +1,65 @@
-/* ... (conserva lo anterior y añade esto al final) ... */
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff6b6b, #5f27cd);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
 
-/* Animación del cupón */
+.container {
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+button {
+    background: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ff6b6b;
+    color: white;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-100px) rotate(20deg);
+    }
+}/* Animación del cupón */
 .coupon {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 30px;
