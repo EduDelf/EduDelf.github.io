@@ -104,4 +104,33 @@ canvas {
     pointer-events: none;
     z-index: 100;
 }
+
+.container {
+    transition: opacity 0.5s ease; /* Suaviza la desaparición */
+}
+
+.coupon-input {
+    margin: 20px 0;
+}
+
+#prizeInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #ff6b6b;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #666; /* Texto gris */
+    background: #f8f9fa;
+    text-align: center;
+}
+
+#prizeInput::placeholder {
+    color: #aaa; /* Placeholder más claro */
+    font-style: italic;
+}
+
+#prizeInput:focus {
+    outline: none;
+    border-color: #5f27cd;
+}
     
