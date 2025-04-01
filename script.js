@@ -17,7 +17,7 @@ function showCoupon() {
 }
 function sendWhatsApp() {
     const prize = document.getElementById("prizeInput").value || "algo especial";
-    const phoneNumber = "+584247334173"; // Reemplaza con tu número (ej: 51987654321)
+    const phoneNumber = "584247334173"; // Reemplaza con tu número (ej: 51987654321)
     const message = `¡Mi cupón! 🎁\nQuiero: ${prize}\n\nDe: ${document.getElementById("name").innerText}`;
     
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
