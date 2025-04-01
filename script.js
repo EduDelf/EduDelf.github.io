@@ -1,14 +1,19 @@
 // Mostrar cupón + confeti
 function showCoupon() {
+    const container = document.querySelector(".container");
     const coupon = document.getElementById("coupon");
-    coupon.classList.remove("hidden");
-    coupon.classList.add("show");
     
-    // Iniciar confeti
-    startConfetti();
+    // Oculta el contenedor inicial con fade-out
+    container.style.transition = "opacity 0.5s ease";
+    container.style.opacity = "0";
     
-    // Ocultar botón inicial (opcional)
-    document.querySelector(".container button").style.display = "none";
+    // Después de la animación, lo oculta completamente
+    setTimeout(() => {
+        container.style.display = "none";
+        coupon.classList.remove("hidden");
+        coupon.classList.add("show");
+        startConfetti(); // Inicia el confeti
+    }, 500); // Espera 0.5 segundos (igual que la transición)
 }
 
 // Copiar código del cupón
